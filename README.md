@@ -20,15 +20,28 @@ Python: v3.12.3<br>
 Install ```pytorch-tabnet``` to employ the transformer-based TabNet model for fusion.
 
 ## Directory Structure
-The repository comprises two folders: ```code``` and ```datasets\with_common_patients_processed```
-<br>```code\models_training.ipynb```: Main implementation notebook.
-<br>```code\make_volcano_from_47_genes.ipynb```: Notebook to plot volcano plot (redundant).
-<br>```code\compute feature importance-reliefF.ipynb```: Notebook to compute feature importance score via ReliefF method.
+The repository comprises three folders: ```data sets```, ```ipynb```, and ```results```
 
-<br>```datasets\with_common_patients_processed\csv_cnv_common_luad.csv```: CSV with CNV data for common patients across adenocarcinoma (ADC)
-<br>```datasets\with_common_patients_processed\csv_cnv_common_lusc.csv```: CSV with CNV data for common patients across squamous cell carcinoma (SCC)
-<br>```datasets\with_common_patients_processed\csv_rna_common_luad.csv```: CSV with RNA data for common patients across adenocarcinoma (ADC)
-<br>```datasets\with_common_patients_processed\csv_rna_common_lusc.csv```: CSV with RNA data for common patients across squamous cell carcinoma (SCC)
+<br>```data sets/CPTAC/luad```: comprises the independent adenocarcinoma (ADC) cohort for validation.
+<br>```data sets/CPTAC/lusc```: comprises the independent squamous cell carcinoma (SCC) cohort for validation.
+<br>```data sets/CPTAC/SynGO_id_convert_2025-10-10 14;44```: comprises the EntrezGeneIDs mapped to their respective HGNC IDs.
+<br>```datasets\with_common_patients_processed\csv_cnv_common_luad.csv```: CSV with CNV data for common patients across ADC.
+<br>```datasets\with_common_patients_processed\csv_cnv_common_lusc.csv```: CSV with CNV data for common patients across SCC.
+<br>```datasets\with_common_patients_processed\csv_rna_common_luad.csv```: CSV with RNA data for common patients across ADC.
+<br>```datasets\with_common_patients_processed\csv_rna_common_lusc.csv```: CSV with RNA data for common patients across SCC.
+
+<br>```ipynb\R001_training_on_XENA.ipynb```: main experiment on TCGA data set; comprises code for proposed weighted-average-based decision-level fusion algorithm.
+<br>```ipynb\R001_validation_on_CPTAC.ipynb```: main validation experiment on CPTAC data set.
+<br>```ipynb\R002_XAI_on_CPTAC_JOINT.ipynb```: SHAP-based interpretability on joint CPTAC data set for discovered genes contribution towards classication.
+<br>```ipynb\R002_XAI_on_CPTAC_Plotting.ipynb```: Plotting of SHAP-based interpretability results.
+<br>```ipynb\R003_joint_omics_XENA.ipynb```: first ablation study -- combining both TCGA-based transcriptomics and genomics data.
+<br>```ipynb\R004_standard_voting_XENA.ipynb```: second ablation study -- employing standard ensemble techniques including hard and soft voting on TCGA-based transcriptomics and genomics data.
+<br>```ipynb\R005_relieff_based_feature_selection.ipynb```: main experiment on TCGA data set; ReliefF-based feature selection using ```skrebate``` library.
+<br>```ipynb\R006_relieff_based_feature_correlation.ipynb```: Pearsons correlation computation of ReliefF-derived features on TCGA data set.
+<br>```ipynb\R007_plot_conf_mats.ipynb```: Plotting confusion matrices of the results obtained from main experiment.
+<br>```ipynb\R008_relieff_based_feature_selection_UNION.ipynb```: third ablation study; employs ReliefF for feature selection and performing a union of features selected from TCGA-based transcriptomics and genomics data.
+
+
 
 ## Running the code
 
