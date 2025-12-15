@@ -20,7 +20,7 @@ Python: v3.12.3<br>
 Install ```pytorch-tabnet``` to employ the transformer-based TabNet model for fusion.
 
 ## Directory Structure
-The repository comprises three folders: ```data sets```, ```ipynb```, and ```results```
+The repository comprises three folders: ```data sets```, ```ipynb```, and ```results```. Here, we provide the information relevant to  ```data sets```and ```ipynb``` folders.
 
 <br>```data sets/CPTAC/luad```: comprises the independent adenocarcinoma (ADC) cohort for validation.
 <br>```data sets/CPTAC/lusc```: comprises the independent squamous cell carcinoma (SCC) cohort for validation.
