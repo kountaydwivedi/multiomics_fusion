@@ -42,7 +42,6 @@ The repository comprises three folders: ```data sets```, ```ipynb```, and ```res
 <br>```ipynb\R008_relieff_based_feature_selection_UNION.ipynb```: third ablation study; employs ReliefF for feature selection and performing a union of features selected from TCGA-based transcriptomics and genomics data.
 
 
-
 ## Running the code
 
 <img width="2745" height="2548" alt="Fig1_revised" src="https://github.com/user-attachments/assets/ffe655d8-40f5-4955-8044-bfc6fa9205b3" />
@@ -51,8 +50,8 @@ The above image is the graphical representation of the methodology followed in t
 1. Copy the datasets to your desired directory (in code:  ```Z:\multiomics based manuscript\datasets\...```).
 2. Replace the path in code with your directory path.
 3. Create a directory to dump the results (in code: ```Z:\multiomics based manuscript\results_for_xena_rna_cnv_only\...```). Replace the path in code with your directory path in ```dump_all_results()``` method.
-4. ```good_seeds``` is the list of seed values you need to iterate the experiment.
-5. Each model could be run separately. To run all the models at once, select the ```Run all``` command in the jupyter notebook.
+4. Each notebook could be run separately, however, in accordance with the numbering. For instance, if you have not ```R005```, then you will not have results to run ```R007```.
+5. In ```R001```, you can either run each model separately, or run all of them at once (select the ```Run all``` in the jupyter notebook).
 
 ## Results
 | Model/Approach 	|   Accuracy   	|    AUROC    	| Precision (PPV) 	| Recall (Sensitivity) 	| Specificity 	|   F1-Score  	|     NPV     	|
