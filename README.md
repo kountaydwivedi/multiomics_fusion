@@ -53,6 +53,20 @@ The above image is the graphical representation of the methodology followed in t
 4. Each notebook could be run separately, however, in accordance with the numbering. For instance, if you have not ```R005```, then you will not have results to run ```R007```.
 5. In ```R001```, you can either run each model separately, or run all of them at once (select the ```Run all``` in the jupyter notebook).
 
+
+## Models Hyperparameter Settings
+The list of various hyperparameter values of individual models employed in the experiment. All the hyperparameters were kept to their default value.
+
+| **Model** 	| **Hyperparameters**                                                                                                                                                       	|
+|----------:	|---------------------------------------------------------------------------------------------------------------------------------------------------------------------------	|
+|       XGB 	| booster=gbtree; eta=0.3; gamma=0; lambda=1; alpha=0; tree_method=auto                                                                                                     	|
+|       SVC 	| C=1.0; kernel=rbf; degree=3; gamma=scale; probability=True                                                                                                                	|
+|       MLP 	| hidden layer sizes=100; activation=relu; solver=adam; batch_size=auto; learning_rate=constant; learning_rate_init=0.001; alpha=0.0001; max_iter=200; early_stopping=False 	|
+|    TabNet 	| eval_metric=[auc, accuracy]; batch_size=512; patience=0; n d=8; n a=8; n steps=3; gamma=1.3; optimizer_fn=adam; optimizer_params=2e-2; epsilon=1e-15                      	|
+
+
+
+
 ## Results
 | Model/Approach 	|   Accuracy   	|    AUROC    	| Precision (PPV) 	| Recall (Sensitivity) 	| Specificity 	|   F1-Score  	|     NPV     	|
 |:--------------:	|:------------:	|:-----------:	|:---------------:	|:--------------------:	|:-----------:	|:-----------:	|:-----------:	|
